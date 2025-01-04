@@ -2,11 +2,12 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { closeMenu } from '../utlis/appSlice';
 import { useSearchParams } from 'react-router-dom';
+import CommentsCointainer from './CommentsCointainer';
 
 const WatchPage = () => {
 
     const [searchParams] = useSearchParams();
-    console.log(searchParams.get("v"));
+    //console.log(searchParams.get("v"));
 
     const disPatch = useDispatch();
 
@@ -15,15 +16,17 @@ const WatchPage = () => {
     },[])
 
   return (
-    <div className='px-5 ml-10 rounded-lg'>
-        <iframe 
-            width="800" 
-            height="460" 
-            src={"https://www.youtube.com/embed/"+searchParams.get("v")+"?si=iMk5ca2FFv-jAylx"} title="YouTube video player" 
-            frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" 
-            allowFullScreen>
-
-        </iframe>
+    <div className='flex flex-col'>
+      <div className='px-5 ml-10 rounded-lg'>
+          <iframe 
+              width="800" 
+              height="460" 
+              src={"https://www.youtube.com/embed/"+searchParams.get("v")+"?si=iMk5ca2FFv-jAylx"} title="YouTube video player" 
+              frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen>
+          </iframe>
+          <CommentsCointainer />
+      </div>
     </div>
   )
 }
