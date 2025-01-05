@@ -72,6 +72,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 YouTube Data API v3 has not been used in project 17348761951 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/youtube.googleapis.com/overview?project=17348761951 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
 
 
+Higher Order Component
+
 Debouncing:
 
 typing slow = 200ms typing fast = 30ms
@@ -94,5 +96,10 @@ Cache: time complexity tro search in array = O(n) time complexity tro search in 
 new Map();
 
 N-Level nesting comments
+
+DATA:
+    Web Sockets -> UI - Server: Bothway handshake, Realtime data, No Regular interval. e.g -> Trading Apps, WhatsApp
+
+    API Poling -> UI - Server: Uni Directional Data. Check Data in a regualr interval. e.g -> Gmail, CrickBuzz, YouTube Live Comments
 
 HomeWork Complete Search Feature
